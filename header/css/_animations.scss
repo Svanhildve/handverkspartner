@@ -1,0 +1,14 @@
+// Fade in on load
+
+@keyframes fadeIn { from { top: -20px; opacity:0; } to { top: 0px; opacity:1; } }
+@keyframes fadeOut { from { top: 0px; opacity:1; } to { top: -20px; opacity:0; } }
+
+.fadein {
+	position: relative;
+	animation: fadeIn ease 1;
+	opacity: 0;
+	top: 0px;
+	animation-fill-mode: forwards;
+	animation-duration: 1.5s;
+	animation-delay: 0.3s;
+}

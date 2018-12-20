@@ -1,0 +1,25 @@
+h1, .h1 {
+	font-family: 'biotif-bold';
+	font-weight: normal;
+	font-size: 45px;
+	color: #5EA500;
+	margin-top: 0;
+	padding-top: 0;
+	margin-bottom: 35px;
+
+	@media #{$breakpoint-md} {
+
+		font-size: 55px;
+
+	}
+}
+
+
+
+h5, .h5 {
+	font-family: 'biotif-bold';
+	font-weight: normal;
+	font-size: 16px;
+	display: block;
+	padding-bottom: 10px;
+}

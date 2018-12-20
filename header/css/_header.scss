@@ -1,0 +1,45 @@
+
+
+.header {
+	padding: 20px;
+  	top: 0; /* Stay on top */
+  	width: 100%; /* Full width */
+  	transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  	display: flex;
+  	flex-flow: row wrap;
+  	justify-content: space-between;
+  	align-items: center;
+
+
+	@media #{$breakpoint-md} {
+
+		padding: 50px;
+	}
+
+}
+
+.header__logo {
+
+}
+
+.header__logo__image {
+
+	width: 150px;
+
+	@media #{$breakpoint-md} {
+
+		width: 200px;
+	}
+
+}
+
+.header__nav__item {
+
+	font-size: 14px;
+
+	@media #{$breakpoint-md} {
+
+		font-size: 16px;
+	}
+
+}
