@@ -11,6 +11,7 @@
   	align-items: center;
 
 
+
 	@media #{$breakpoint-md} {
 
 		padding: 50px;
@@ -20,6 +21,16 @@
 
 .header__logo {
 
+	a:hover {
+
+		.header__logo__text, .header__logo__h {
+
+			fill: #e6e6e6;
+
+		}
+
+	}
+
 }
 
 .header__logo__image {
@@ -28,13 +39,14 @@
 
 	@media #{$breakpoint-md} {
 
-		width: 200px;
+		width: 210px;
 	}
 
 }
 
 .header__nav__item {
-
+	transition: all 0.4s;
+	opacity: 1;
 	font-size: 14px;
 
 	@media #{$breakpoint-md} {
@@ -42,4 +54,39 @@
 		font-size: 16px;
 	}
 
+}
+
+.header__logo__h {
+	opacity: 1;
+	transition: all 0.4s;
+}
+
+.header__logo__text {
+	transition: all 0.4s;
+	opacity: 1;
+}
+
+.fadeonscroll {
+
+	.header__logo__h {
+		opacity: 1;
+		transition: all 0.4s;
+	}
+
+	.header__logo__text {
+		opacity: 0;
+		transition: all 0.4s;
+		top: -300px;
+	}
+
+	.header__nav__item {
+		transition: all 0.4s;
+		opacity: 0;
+	}
+
+}
+
+
+.inner-body {
+	height: 1000px;
 }
