@@ -16,6 +16,11 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+	<script src="https://cdnjs.com/libraries/bodymovin" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.4.2/lottie.min.js" type="text/javascript"></script>
+
+
+
 <script>
 
 		$(window).scroll(function(){
@@ -29,6 +34,20 @@
 
 
 </script>
+
+<script type="text/javascript">
+	
+	var animation = bodymovin.loadAnimation({
+	  container: document.getElementById('bm'), // Required
+	  path: '404.json', // Required
+	  renderer: 'svg', // Required
+	  loop: false, // Optional
+	  autoplay: true, // Optional
+	  name: "Hello World", // Name for future reference. Optional.
+	})
+
+</script>
+
 
 
 </head>
@@ -104,45 +123,14 @@
 
 		<div class="project__heading col-m-8 col-m-offset-1">
 
-			<a href="#">Alle prosjekt</a>
 
-			<h1>Lidaveten 37, Volda</h1>
+			<div id="bm"> hallo </div>
 
-			<p>Nybygg: enebolig</p>
-
-			<p>2017</p>
 
 		</div>
 
 	</div>
 
-	<div class="row wide-wrapper full-width">
-
-		<div class="col-s-12 full-width">
-
-			<div class="project__hero__wrap">
-
-				<div class="project__he">
-
-					<img src="./images/project-hero.jpg" class="project__hero">
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</div>
-
-	<div class="row wrapper">
-
-		<div class="col-m-8 col-m-offset-1">
-
-			<p class="lede">Etiam consequat mattis ligula, vel interdum libero euismod vel. Vestibulum in ante mattis, sodales lacus eu, tincidunt sem. Phasellus consequat odio ante, vitae pulvinar risus scelerisque vel. Donec dictum lorem erat, vitae fermentum felis venenatis quis. Vivamus ac turpis felis. In malesuada dolor vel ipsum venenatis, ac aliquet est cursus. Morbi vel mi mauris. Mauris lacinia a libero a imperdiet.</p>
-
-		</div>
-
-	</div>
 
 	<div class="footer">
 

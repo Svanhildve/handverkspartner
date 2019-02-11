@@ -522,10 +522,22 @@ a:hover, a:active {
   opacity: 0; }
 
 *, html, body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
 
 body {
   font-size: 16px;
   margin-top: 180px; }
+
+.project__hero {
+  width: 100%;
+  padding-right: 60px; }
+
+.project__hero__wrap {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-bottom: 90%; }
 
 /*# sourceMappingURL=style.css.map */
