@@ -1,0 +1,73 @@
+.projects {
+  height: 100%; }
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  transition: all 0.9s ease-in-out; }
+
+.button {
+  z-index: 10;
+  position: absolute; }
+
+.slide:nth-child(1) {
+  z-index: 9;
+  background: #FFF7F0; }
+
+.slide:nth-child(2) {
+  z-index: 8;
+  background: #FFE2C8; }
+
+.slide:nth-child(3) {
+  z-index: 7;
+  background: #FFF7F0; }
+
+.active.slide {
+  height: 100%; }
+
+.slide {
+  display: flex;
+  flex-direction: row; }
+
+.copy {
+  width: 400px;
+  transition: all 0.2s ease;
+  opacity: 0; }
+
+.slide.active .copy {
+  opacity: 1;
+  transition: all 0.2s 0.4s ease; }
+
+.project__image-wrap {
+  width: 400px; }
+
+.project__image-wrap img {
+  width: 100%; }
+
+.project__image-clip {
+  -webkit-clip-path: url("#h-clip");
+  clip-path: url("#h-clip"); }
+
+.clip-svg {
+  width: 0;
+  height: 0; }
+
+@font-face {
+  font-family: biotif-regular;
+  src: url(fonts/Biotif-Regular.otf); }
+@font-face {
+  font-family: biotif-bold;
+  src: url(fonts/Biotif-Bold.otf); }
+body {
+  font-family: 'biotif-regular';
+  font-size: 16px;
+  color: #333333; }
+
+p {
+  line-height: 26px;
+  margin-top: 0; }
+
+/*# sourceMappingURL=style.css.map */
