@@ -1,5 +1,10 @@
+body {
+   background: #FFF7F0;
+}
+
 .projects { 
   height:100%;
+
 }
 
 .slide {
@@ -9,8 +14,8 @@
  height: 0;
  width: 100%;
  transition: all 0.9s ease-in-out;
-// height: 100%;
-// opacity: 0
+ height: 100%;
+ opacity: 0;
 }
 
 .button {
@@ -20,27 +25,29 @@
 
 .slide:nth-child(1) { 
  z-index: 9;
- background: #FFF7F0;
+ //background: #FFF7F0;
 } 
 
 .slide:nth-child(2) {
  z-index: 8;
- background: #FFE2C8;
+ //background: #FFE2C8;
 } 
 
 .slide:nth-child(3) {
  z-index: 7;
- background: #FFF7F0;
+ //background: #FFF7F0;
 }
 
 .active.slide {
  height: 100%;
-// opacity: 1;
+ opacity: 1;
 }
 
 .slide {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .copy {
@@ -54,7 +61,17 @@
 
 .slide.active .copy {
    opacity: 1;
-   transition: all 0.2s 0.4s ease;
+   transition: all 0.2s ease;
+ }
+
+ .project__image-wrap {
+ transition: opacity 0.2s ease;
+  opacity: 0
+ }
+
+ .slide.active .project__image-wrap {
+   transition: opacity 0.2s ease;
+  opacity: 1
  }
 
 .project__image-wrap {
@@ -73,4 +90,16 @@
  .clip-svg {
   width: 0;
   height: 0;
+ }
+
+ .pagination {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 20;
+
+  a {
+    display: block;
+  }
  }

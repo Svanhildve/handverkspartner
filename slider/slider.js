@@ -36,3 +36,8 @@ document.querySelector(".linkPrev").addEventListener("click", function(){
 	prevSlide()
 	
 })
+
+
+// pagination
+
+document.querySelector(".p1").addEventListener("click", function(){}
