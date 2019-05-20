@@ -10,9 +10,7 @@ body {
   left: 0;
   height: 0;
   width: 100%;
-  transition: all 0.9s ease-in-out;
-  height: 100%;
-  opacity: 0; }
+  height: 100%; }
 
 .button {
   z-index: 10;
@@ -28,8 +26,7 @@ body {
   z-index: 7; }
 
 .active.slide {
-  height: 100%;
-  opacity: 1; }
+  height: 100%; }
 
 .slide {
   display: flex;
@@ -38,24 +35,24 @@ body {
   justify-content: space-around; }
 
 .copy {
+  transform: translateY(10px);
   width: 400px;
-  transition: all 0.2s ease;
-  opacity: 0; }
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out; }
 
 .slide.active .copy {
-  opacity: 1;
-  transition: all 0.2s ease; }
-
-.project__image-wrap {
-  transition: opacity 0.2s ease;
-  opacity: 0; }
-
-.slide.active .project__image-wrap {
-  transition: opacity 0.2s ease;
+  transform: translateY(0px);
+  transition: transform 0.7s ease-in-out, opacity 0.5s ease-in-out;
   opacity: 1; }
 
+.active.slide .project__image-wrap {
+  opacity: 1;
+  transition: all 0.7s ease; }
+
 .project__image-wrap {
-  width: 400px; }
+  width: 400px;
+  opacity: 0;
+  transition: all 0.7s ease; }
 
 .project__image-wrap img {
   width: 100%; }
@@ -79,10 +76,10 @@ body {
 
 @font-face {
   font-family: biotif-regular;
-  src: url(fonts/Biotif-Regular.otf); }
+  src: url(../fonts/Biotif-Regular.otf); }
 @font-face {
   font-family: biotif-bold;
-  src: url(fonts/Biotif-Bold.otf); }
+  src: url(../fonts/Biotif-Bold.otf); }
 body {
   font-family: 'biotif-regular';
   font-size: 16px;

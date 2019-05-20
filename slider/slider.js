@@ -1,14 +1,17 @@
 const slideTags = document.querySelectorAll(".projects section")
+const paginationTags = document.querySelectorAll(".pagination .pagination__link")
 
 let currentSlide = 0
 
-console.log("currentSlide")
+
+
 
 const nextSlide = function(){
 
 	if (currentSlide < slideTags.length - 1) {
 		slideTags[currentSlide].classList.remove("active")
 		currentSlide = currentSlide + 1
+		slideTags[currentSlide].classList.add("active")
 	} else {
 		currentSlide = currentSlide
 	}
@@ -17,8 +20,9 @@ const nextSlide = function(){
 const prevSlide = function(){
 
 	if (currentSlide > 0) {
-		slideTags[currentSlide - 1].classList.add("active")
+		slideTags[currentSlide].classList.remove("active")
 		currentSlide = currentSlide - 1
+		slideTags[currentSlide].classList.add("active")
 	} else {
 		currentSlide = currentSlide
 	}
@@ -40,4 +44,5 @@ document.querySelector(".linkPrev").addEventListener("click", function(){
 
 // pagination
 
-document.querySelector(".p1").addEventListener("click", function(){}
+
+
