@@ -13,9 +13,8 @@ body {
  position: absolute;
  top:0;
  left:0;
- height: 0;
  width: 100%;
- //transition: all 0.3s ease-in-out;
+ transition: all 0.3s ease-in-out;
  height: 100%;
  //opacity: 0;
  visibility: hidden;
@@ -32,6 +31,7 @@ body {
 } 
 
 .slide:nth-child(2) {
+ z-index: 8;
  //background: #FFE2C8;
 } 
 
@@ -43,7 +43,7 @@ body {
 .active.slide {
  height: 100%;
  //opacity: 1;
- //transition: all 0.3s ease-in-out;
+ transition: all 0.3s ease-in-out;
  visibility: visible;
 }
 
@@ -155,7 +155,7 @@ body {
 .pagination__link {
   width: 12px;
   height: 12px;
-  margin: 10px;
+  margin: 10px auto;
   border-radius: 50%;
   background: darken(#FFF7F0, 10%);
   border: 1px solid #FFF7F0;

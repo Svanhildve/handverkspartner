@@ -6,15 +6,13 @@ let currentSlide = 0
 const nextSlide = function(){
 
 	if (currentSlide < slideTags.length - 1) {
-		slideTags[currentSlide].classList.remove("active")
-		paginationTags[currentSlide].classList.remove("active")
+		
+		removeActiveClass()
 
 		currentSlide = currentSlide + 1
 
-		slideTags[currentSlide].classList.add("active")
-		paginationTags[currentSlide].classList.add("active")
+		addActiveClass()
 		
-
 		
 	} else {
 		currentSlide = currentSlide
@@ -24,13 +22,12 @@ const nextSlide = function(){
 const prevSlide = function(){
 
 	if (currentSlide > 0) {
-		slideTags[currentSlide].classList.remove("active")
-		paginationTags[currentSlide].classList.remove("active")
+
+		removeActiveClass()
 
 		currentSlide = currentSlide - 1
 
-		slideTags[currentSlide].classList.add("active")
-		paginationTags[currentSlide].classList.add("active")
+		addActiveClass()
 		
 	} else {
 		currentSlide = currentSlide
@@ -49,6 +46,16 @@ document.querySelector(".linkPrev").addEventListener("click", function(){
 	prevSlide()
 	
 })
+
+const addActiveClass = function(){
+	slideTags[currentSlide].classList.add("active")
+	paginationTags[currentSlide].classList.add("active")
+}
+
+const removeActiveClass = function(){
+	slideTags[currentSlide].classList.remove("active")
+	paginationTags[currentSlide].classList.remove("active")
+}
 
 
 // scroll
@@ -87,37 +94,31 @@ document.addEventListener("wheel", dHandler);
 
 paginationTags[0].addEventListener("click", function() {
 
-	slideTags[currentSlide].classList.remove("active")
-	paginationTags[currentSlide].classList.remove("active")
+	removeActiveClass()
 
 	currentSlide = 0
 
-	slideTags[currentSlide].classList.add("active")
-	paginationTags[currentSlide].classList.add("active")
+	addActiveClass()
 	
 })
 
 paginationTags[1].addEventListener("click", function() {
 
-	slideTags[currentSlide].classList.remove("active")
-	paginationTags[currentSlide].classList.remove("active")
+	removeActiveClass()
 
 	currentSlide = 1
 
-	slideTags[currentSlide].classList.add("active")
-	paginationTags[currentSlide].classList.add("active")
+	addActiveClass()
 	
 })
 
 paginationTags[2].addEventListener("click", function() {
 
-	slideTags[currentSlide].classList.remove("active")
-	paginationTags[currentSlide].classList.remove("active")
+	removeActiveClass()
 
 	currentSlide = 2
 
-	slideTags[currentSlide].classList.add("active")
-	paginationTags[currentSlide].classList.add("active")
+	addActiveClass()
 	
 })
 
