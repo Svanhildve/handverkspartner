@@ -1,0 +1,64 @@
+.link--featured {
+  text-decoration: none;
+  color: #333333;
+  font-size: 14px;
+  position: relative;
+  display: inline;
+//  overflow: hidden;
+font-weight: 900;
+
+
+  &:before {
+
+  }
+}
+
+.link--featured svg {
+  z-index: 1;
+  //position: absolute;
+  //top: 0;
+  //left: 0;
+  transition: transform 0.3s ease;
+  vertical-align: middle;
+}
+
+.link--featured svg g line,
+.link--featured svg g polyline,
+.link--featured svg g circle {
+  fill: none;
+  stroke: #000;
+}
+
+.link--featured svg g line,
+.link--featured svg g polyline {
+  stroke-miterlimit: 10;
+}
+
+.link--featured svg g circle {
+	transform: translateX(0);
+  display: block;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1px;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset ease-out 0.5s;
+}
+
+
+.link--featured:hover {
+	svg {
+  		-webkit-transform: translateZ(0) translateX(0.5em);
+        transform: translateZ(0) translateX(0.5em);
+        transition: transform 0.3s ease;
+    }
+}
+
+.link--featured:hover svg g circle {
+  stroke-dashoffset: 200;
+}
+
+.link--featured span {
+	margin-right: 20px;
+	vertical-align: middle;
+}

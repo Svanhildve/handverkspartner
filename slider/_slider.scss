@@ -4,6 +4,9 @@ body {
 
 .projects { 
   height:100%;
+  margin-left: 200px;
+  margin-right: 200px;
+
 }
 
 .slide {
@@ -28,7 +31,6 @@ body {
 } 
 
 .slide:nth-child(2) {
- z-index: 8;
  //background: #FFE2C8;
 } 
 
@@ -47,7 +49,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .copy {
@@ -55,6 +57,7 @@ body {
   width: 400px;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
+  margin-right: 150px;
 }
 
 .project__year {
@@ -142,15 +145,6 @@ body {
   }
  }
 
-.link--featured {
-  text-decoration: none;
-  color: #333333;
-  font-size: 14px;
-
-  &:before {
-
-  }
-}
 
 .text--meta {
   font-size: 14px;

@@ -85,59 +85,53 @@ document.addEventListener("wheel", dHandler);
 
 
 
-// paginationTags[0].addEventListener("click", function() {
+paginationTags[0].addEventListener("click", function() {
 
-// 	slideTags[currentSlide].classList.remove("active")
-// 	paginationTags[currentSlide].classList.remove("active")
+	slideTags[currentSlide].classList.remove("active")
+	paginationTags[currentSlide].classList.remove("active")
 
-// 	currentSlide = 0
+	currentSlide = 0
 
-// 	slideTags[currentSlide].classList.add("active")
-// 	paginationTags[currentSlide].classList.add("active")
+	slideTags[currentSlide].classList.add("active")
+	paginationTags[currentSlide].classList.add("active")
 	
-// })
+})
 
-// paginationTags[1].addEventListener("click", function() {
+paginationTags[1].addEventListener("click", function() {
 
-// 	slideTags[currentSlide].classList.remove("active")
-// 	paginationTags[currentSlide].classList.remove("active")
+	slideTags[currentSlide].classList.remove("active")
+	paginationTags[currentSlide].classList.remove("active")
 
-// 	currentSlide = 1
+	currentSlide = 1
 
-// 	slideTags[currentSlide].classList.add("active")
-// 	paginationTags[currentSlide].classList.add("active")
+	slideTags[currentSlide].classList.add("active")
+	paginationTags[currentSlide].classList.add("active")
 	
-// })
+})
 
-// paginationTags[2].addEventListener("click", function() {
+paginationTags[2].addEventListener("click", function() {
 
-// 	slideTags[currentSlide].classList.remove("active")
-// 	paginationTags[currentSlide].classList.remove("active")
+	slideTags[currentSlide].classList.remove("active")
+	paginationTags[currentSlide].classList.remove("active")
 
-// 	currentSlide = 2
+	currentSlide = 2
 
-// 	slideTags[currentSlide].classList.add("active")
-// 	paginationTags[currentSlide].classList.add("active")
+	slideTags[currentSlide].classList.add("active")
+	paginationTags[currentSlide].classList.add("active")
 	
-// })
-
-const goToSlide = slide => { 
-
-// plz go to slide things here 
-
-}
+})
 
 
-const goToSlide = function(slide){
+// const goToSlide = function(slide){
 
-// plz go to slide things here 
+// // plz go to slide things here 
 
-}
-​
-paginationTags.forEach(function(tag) {
-  tag.addEventListener("click", function() {
+// }
+// ​
+// paginationTags.forEach(function(tag) {
+//   tag.addEventListener("click", function() {
 
-    goToSlide()
+//     goToSlide()
 
-  });
-});
+//   });
+// });
