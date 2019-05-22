@@ -75,12 +75,14 @@ function debounced(delay, fn) {
 
 const myHandler = (event) => { 
 	if (event.deltaY < 0) {
-		console.log('scrolling up')
+		
 		prevSlide()
+
 	} 
 	if (event.deltaY > 0) {
-		console.log('scrolling down')
+		
 		nextSlide() 
+
 	}
 } // do something with the event
 
@@ -125,10 +127,8 @@ paginationTags[2].addEventListener("click", function() {
 
 // const goToSlide = function(slide){
 
-// // plz go to slide things here 
-
 // }
-// ​
+
 // paginationTags.forEach(function(tag) {
 //   tag.addEventListener("click", function() {
 

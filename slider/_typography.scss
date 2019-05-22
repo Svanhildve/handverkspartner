@@ -1,8 +1,12 @@
 h2, .h2--project {
 	font-family: "Lapture";
 	font-weight: 400;
-	font-size: 48px;
+	font-size: 30px;
 	margin-bottom: 16px;
+
+	@media #{$breakpoint-md} {
+		font-size: 48px;
+	}
 }
 
 .text--meta {
@@ -10,7 +14,12 @@ h2, .h2--project {
 }
 
 .text--teaser {
-	font-size: 18px;
-	line-height: 32px;
+	font-size: 16px;
+	line-height: 30px;
 	margin-bottom: 50px;
+
+	@media #{$breakpoint-md} {
+		font-size: 18px;
+		line-height: 32px;
+	}
 }
