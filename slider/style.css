@@ -1,3 +1,39 @@
+@font-face {
+  font-family: biotif-regular;
+  src: url(../fonts/Biotif-Regular.otf); }
+@font-face {
+  font-family: biotif-bold;
+  src: url(../fonts/Biotif-Bold.otf); }
+body {
+  font-family: 'biotif-regular';
+  font-size: 16px;
+  color: #333333; }
+
+p {
+  line-height: 26px;
+  margin-top: 0; }
+
+.sr-only {
+  visibility: hidden; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+h2, .h2--project {
+  font-family: "Lapture";
+  font-weight: 400;
+  font-size: 48px;
+  margin-bottom: 16px; }
+
+.text--meta {
+  margin-bottom: 18px; }
+
+.text--teaser {
+  font-size: 18px;
+  line-height: 32px;
+  margin-bottom: 50px; }
+
 body {
   background: #FFF7F0; }
 
@@ -44,21 +80,24 @@ body {
   visibility: hidden;
   transform: rotate(90deg);
   position: absolute;
-  top: 38px;
-  right: -70px;
-  font-weight: 900;
+  top: 44px;
+  right: -80px;
+  font-weight: 700;
   font-size: 14px;
-  transition: opacity 0s ease; }
+  transition: opacity 0s ease;
+  font-family: "Lapture"; }
 
 .project__year__line {
-  margin-right: 60px; }
+  margin-right: 72px;
+  vertical-align: top;
+  text-align: left; }
   .project__year__line:before {
     content: '';
     position: absolute;
-    top: 8px;
+    top: 6px;
     left: 24px;
-    height: 2px;
-    width: 48px;
+    height: 1px;
+    width: 54px;
     background: #333333; }
 
 .slide.active .project__year {
@@ -96,7 +135,7 @@ body {
 .pagination {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 20px;
   transform: translateY(-50%);
   z-index: 20; }
   .pagination a {
@@ -111,33 +150,31 @@ body {
   font-size: 14px; }
 
 .pagination__link {
-  width: 20px;
-  height: 20px;
+  width: 12px;
+  height: 12px;
+  margin: 10px;
   border-radius: 50%;
-  background: black; }
+  background: #ffdcbd;
+  border: 1px solid #FFF7F0; }
 
 .pagination__link.active {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  background: red; }
-
-@font-face {
-  font-family: biotif-regular;
-  src: url(../fonts/Biotif-Regular.otf); }
-@font-face {
-  font-family: biotif-bold;
-  src: url(../fonts/Biotif-Bold.otf); }
-body {
-  font-family: 'biotif-regular';
-  font-size: 16px;
-  color: #333333; }
-
-p {
-  line-height: 26px;
-  margin-top: 0; }
-
-.sr-only {
-  visibility: hidden; }
+  border: 1px solid #333333;
+  position: relative;
+  background: #FFF7F0; }
+  .pagination__link.active:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    background: #ffa557;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 50%;
+    text-align: center;
+    margin: auto; }
 
 /*# sourceMappingURL=style.css.map */

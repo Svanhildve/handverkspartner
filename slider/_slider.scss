@@ -4,7 +4,6 @@ body {
 
 .projects { 
   height:100%;
-
 }
 
 .slide {
@@ -62,24 +61,27 @@ body {
   visibility: hidden;
   transform: rotate(90deg);
   position: absolute;
-  top: 38px;
-  right: -70px;
-  font-weight: 900;
+  top: 44px;
+  right: -80px;
+  font-weight: 700;
   font-size: 14px;
   transition: opacity 0s ease;
+  font-family: "Lapture";
 
 }
 
 .project__year__line {
-  margin-right: 60px;
+  margin-right: 72px;
+  vertical-align: top;
+  text-align: left;
 
     &:before {
     content: '';
     position: absolute;
-    top: 8px;
+    top: 6px;
     left: 24px;
-    height: 2px;
-    width: 48px;
+    height: 1px;
+    width: 54px;
     background: #333333;
   }
 }
@@ -130,9 +132,10 @@ body {
  .pagination {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 20px;
   transform: translateY(-50%);
   z-index: 20;
+
 
   a {
     display: block;
@@ -143,6 +146,10 @@ body {
   text-decoration: none;
   color: #333333;
   font-size: 14px;
+
+  &:before {
+
+  }
 }
 
 .text--meta {
@@ -150,15 +157,35 @@ body {
 }
 
 .pagination__link {
-  width: 20px;
-  height: 20px;
+  width: 12px;
+  height: 12px;
+  margin: 10px;
   border-radius: 50%;
-  background: black;
+  background: darken(#FFF7F0, 10%);
+  border: 1px solid #FFF7F0;
 }
 
 .pagination__link.active {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  background: red;
+  border: 1px solid #333333;
+  position: relative;
+  background: #FFF7F0;
+
+  &:after {
+    content: '';
+    width: 8px; 
+    height: 8px;
+    position: absolute;
+    background: darken(#FFF7F0, 30%);
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 50%;
+    text-align: center;
+    margin: auto;
+  }
+
 }
+

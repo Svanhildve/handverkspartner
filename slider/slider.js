@@ -81,4 +81,63 @@ const dHandler = debounced(50, myHandler);
 document.addEventListener("wheel", dHandler);
 
 
-//
+// pagination
+
+
+
+// paginationTags[0].addEventListener("click", function() {
+
+// 	slideTags[currentSlide].classList.remove("active")
+// 	paginationTags[currentSlide].classList.remove("active")
+
+// 	currentSlide = 0
+
+// 	slideTags[currentSlide].classList.add("active")
+// 	paginationTags[currentSlide].classList.add("active")
+	
+// })
+
+// paginationTags[1].addEventListener("click", function() {
+
+// 	slideTags[currentSlide].classList.remove("active")
+// 	paginationTags[currentSlide].classList.remove("active")
+
+// 	currentSlide = 1
+
+// 	slideTags[currentSlide].classList.add("active")
+// 	paginationTags[currentSlide].classList.add("active")
+	
+// })
+
+// paginationTags[2].addEventListener("click", function() {
+
+// 	slideTags[currentSlide].classList.remove("active")
+// 	paginationTags[currentSlide].classList.remove("active")
+
+// 	currentSlide = 2
+
+// 	slideTags[currentSlide].classList.add("active")
+// 	paginationTags[currentSlide].classList.add("active")
+	
+// })
+
+const goToSlide = slide => { 
+
+// plz go to slide things here 
+
+}
+
+
+const goToSlide = function(slide){
+
+// plz go to slide things here 
+
+}
+​
+paginationTags.forEach(function(tag) {
+  tag.addEventListener("click", function() {
+
+    goToSlide()
+
+  });
+});
