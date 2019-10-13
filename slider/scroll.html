@@ -10,12 +10,15 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0">
 
-	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="./main.css">
 
 	<title>Handverkspartner</title>
 
 	<!--<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">-->
+
+
+
 
 </head>
 
@@ -23,7 +26,7 @@
 
 <body>
 
-<header class="header">
+<!--<header class="header">
 
 	
 	<span class="header__logo">
@@ -84,29 +87,15 @@
 	</div>
 
 </header>
+-->
 
 
+<section class="grid-container">
 
-<section class="grid-container inner-body">
 
+	
 
-	<div class="row wrapper">
-
-		<div class="project__heading col-m-8 col-m-offset-1">
-
-			<a href="#">Alle prosjekt</a>
-
-			<h1>Lidaveten 37, Volda</h1>
-
-			<p>Nybygg: enebolig</p>
-
-			<p>2017</p>
-
-		</div>
-
-	</div>
-
-	<div class="row wide-wrapper full-width">
+	<!--<div class="row wide-wrapper full-width">
 
 		<div class="col-s-12 full-width">
 
@@ -122,13 +111,37 @@
 
 		</div>
 
-	</div>
+	</div>-->
 
-	<div class="row wrapper">
+	<div class="row scrolling-wrapper">
 
-		<div class="col-m-8 col-m-offset-1">
+		<div class="project__heading col-m-8 col-m-offset-1">
+
+			<a href="#">Alle prosjekt</a>
+
+			<h1>Lidaveten 37, Volda</h1>
+
+			<p>Nybygg: enebolig</p>
+
+			<p>2017</p>
+
+		</div>
+
+		<div class="col-m-8" style="background: blue;">
 
 			<p class="lede">Etiam consequat mattis ligula, vel interdum libero euismod vel. Vestibulum in ante mattis, sodales lacus eu, tincidunt sem. Phasellus consequat odio ante, vitae pulvinar risus scelerisque vel. Donec dictum lorem erat, vitae fermentum felis venenatis quis. Vivamus ac turpis felis. In malesuada dolor vel ipsum venenatis, ac aliquet est cursus. Morbi vel mi mauris. Mauris lacinia a libero a imperdiet.</p>
+  
+
+		</div>
+
+		<div class="col-m-8" style="background: pink;">
+
+			Section 2
+
+		</div>
+		<div class="col-m-8" style="background: orange;">
+
+			Section 3
 
 		</div>
 
@@ -139,6 +152,33 @@
 
 <script type="text/javascript" src="fade.js"></script>
 <script type="text/javascript" src="slider.js"></script>
+
+<script>
+
+	const scrollWrapper = document.querySelector(".scrolling-wrapper")
+
+    /* We define our function 🕹 */
+    function replaceVerticalScrollByHorizontal(event) {
+    	if (event.deltaY != 0) {
+      	// manually scroll horizonally instead
+        window.scroll(window.scrollX + event.deltaY * 5, window.scrollY);
+        
+        // prevent vertical scroll
+      	event.preventDefault();
+      }
+      return;
+    }
+
+
+    var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+	if (viewportWidth > 1024) {
+
+		/* Listener on window once we start scrolling, we run our function 💨 */
+  		window.addEventListener('wheel', replaceVerticalScrollByHorizontal, {passive: false});
+
+	}
+
+</script>
 
 </body>
 
