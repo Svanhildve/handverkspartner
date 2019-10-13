@@ -1,10 +1,14 @@
-.scrolling-wrapper {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  height: 100vh;
+@media #{$breakpoint-md} {
 
-  div {
-    flex: 0 0 auto;
-  }
+	.scrolling-wrapper {
+	  display: flex;
+	  flex-wrap: nowrap;
+	  overflow-x: auto;
+	  height: 100vh;
+
+	  div {
+	    flex: 0 0 auto;
+	  }
+	}
+	
 }
