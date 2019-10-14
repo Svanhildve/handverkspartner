@@ -26,7 +26,7 @@
 
 <body>
 
-<!--<header class="header">
+<header class="header">
 
 	
 	<span class="header__logo">
@@ -87,7 +87,7 @@
 	</div>
 
 </header>
--->
+
 
 
 <section class="grid-container">
@@ -115,31 +115,27 @@
 
 	<div class="row scrolling-wrapper">
 
-		<div class="col-s-12 project__heading col-m-8 col-m-offset-1">
+		<div class="scrolling--element col-s-12 project__heading col-m-7 col-m-offset-1">
 
-			<a href="#">Alle prosjekt</a>
+			<p class="project__meta">Nybygg: enebolig</p>
 
-			<h1>Lidaveten 37, Volda</h1>
+			<h1 class="h1--project-detail">Lidaveten 37, Volda</h1>
 
-			<p>Nybygg: enebolig</p>
+			<p class="project__lead">Arkitektteikna hytte med inspirasjon og materiale frå naturen i lokalområdet. Utført i samarbeid med Andersen Arkitekter.</p>
 
-			<p>2017</p>
-
-		</div>
-
-		<div class="col-s-12 col-m-8" style="background: blue;">
-
-			<p class="lede">Etiam consequat mattis ligula, vel interdum libero euismod vel. Vestibulum in ante mattis, sodales lacus eu, tincidunt sem. Phasellus consequat odio ante, vitae pulvinar risus scelerisque vel. Donec dictum lorem erat, vitae fermentum felis venenatis quis. Vivamus ac turpis felis. In malesuada dolor vel ipsum venenatis, ac aliquet est cursus. Morbi vel mi mauris. Mauris lacinia a libero a imperdiet.</p>
-  
+			<p class="project__intro">Etiam consequat mattis ligula, vel interdum libero euismod vel. Vestibulum in ante mattis, sodales lacus eu, tincidunt sem. Phasellus consequat odio ante, vitae pulvinar risus scelerisque vel. Donec dictum lorem erat, vitae fermentum felis venenatis quis. Vivamus ac turpis felis. In malesuada dolor vel ipsum venenatis, ac aliquet est cursus. Morbi vel mi mauris. Mauris lacinia a libero a imperdiet.</p>
 
 		</div>
 
-		<div class="col-s-12 col-m-8" style="background: pink;">
+		<div class="col-m-3 scrolling--element"></div>
 
-			Section 2
+		<div class="col-s-12 col-m-8 scrolling--element full-width" style="background: pink;">
+
+			<img src="https://via.placeholder.com/150">
 
 		</div>
-		<div class="col-s-12 col-m-8" style="background: orange;">
+
+		<div class="col-s-12 col-m-8 scrolling--element" style="background: orange;">
 
 			Section 3
 
@@ -155,26 +151,26 @@
 
 <script>
 
-	const scrollWrapper = document.querySelector(".scrolling-wrapper")
-
-    /* We define our function 🕹 */
-    function replaceVerticalScrollByHorizontal(event) {
-    	if (event.deltaY != 0) {
-      	// manually scroll horizonally instead
-        window.scroll(window.scrollX + event.deltaY * 5, window.scrollY);
-        
-        // prevent vertical scroll
-      	event.preventDefault();
-      }
-      return;
-    }
-
 
     var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+	
 	if (viewportWidth > 1024) {
 
-		/* Listener on window once we start scrolling, we run our function 💨 */
-  		window.addEventListener('wheel', replaceVerticalScrollByHorizontal, {passive: false});
+			var scrollWrapper = document.querySelector(".scrolling-wrapper");
+
+			scrollWrapper.addEventListener('wheel', function(e) {
+
+			  if (e.deltaY > 0) scrollWrapper.scrollLeft += 10;
+			  else scrollWrapper.scrollLeft -= 10;
+
+			  event.preventDefault();
+
+			  scrollAmount += 10;
+			  if(scrollAmount >= 100){
+                        window.clearInterval(slideTimer);
+               }
+  
+			});
 
 	}
 

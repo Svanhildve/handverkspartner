@@ -935,9 +935,77 @@ body {
     flex-wrap: nowrap;
     overflow-x: auto;
     height: 100vh;
+    -webkit-overflow-scrolling: touch;
   }
-  .scrolling-wrapper div {
+  .scrolling-wrapper .scrolling--element {
     flex: 0 0 auto;
+    max-width: 1170px;
+  }
+}
+.project__heading {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .project__heading {
+    margin-bottom: 80px;
+  }
+}
+
+.project__lead {
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .project__lead {
+    margin-bottom: 120px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+.project__intro {
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 100;
+}
+@media only screen and (min-width: 768px) {
+  .project__intro {
+    -webkit-column-count: 2;
+    /* Old Chrome, Safari and Opera */
+    -moz-column-count: 2;
+    /* Old Firefox */
+    column-count: 2;
+    column-gap: 40px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+.project__meta {
+  font-size: 14px;
+  margin-bottom: 35px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 100;
+}
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 48px;
+  }
+}
+
+.h1--project-detail {
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 768px) {
+  .h1--project-detail {
+    margin-bottom: 25px;
   }
 }
 
