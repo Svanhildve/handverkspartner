@@ -1,0 +1,94 @@
+.case {
+	background: $beige;
+}
+
+@media #{$breakpoint-md} {
+
+	.scrolling-wrapper {
+	  display: flex;
+	  flex-wrap: nowrap;
+	  overflow-x: auto;
+	  height: 100vh;
+	  -webkit-overflow-scrolling: touch;
+
+
+
+	  .scrolling--element {
+	    flex: 0 0 auto;
+	    //max-width: 1170px;
+	  }
+	  
+	}
+	
+}
+
+.project__heading {
+	display: flex;
+	flex-direction: column;
+	align-self: flex-end;
+	margin-bottom: 40px;
+	position: relative;
+
+	@media #{$breakpoint-md} {
+		margin-bottom: 80px;
+	}
+
+	&:before {
+		content: url(../images/arrow-right.svg);
+		width: 28px; 
+		height: 11px;
+	    position: absolute;
+	    right: 40px;
+	    transform: translateY(-50%);
+	    top:50%;
+
+	}
+}
+
+.project__lead {
+	margin-bottom: 40px;
+	
+
+	@media #{$breakpoint-md} {
+		margin-bottom: 80px;
+	}
+}
+
+.project__intro {
+
+	font-size: 14px;
+	line-height: 28px;
+	font-weight: 100;
+	
+	  
+	@media #{$breakpoint-md} {
+		-webkit-column-count: 2; /* Old Chrome, Safari and Opera */
+		-moz-column-count: 2; /* Old Firefox */
+		column-count: 2;
+		column-gap: 40px;
+		font-size: 16px;
+		line-height: 30px;
+	}
+}
+
+.project__meta {
+	font-size: 14px;
+	margin-bottom: 35px;
+}
+
+h1 {
+	font-size: 28px;
+	font-weight: 100;
+
+	@media #{$breakpoint-md} {
+		font-size: 48px;
+	}
+}
+
+.h1--project-detail {
+	margin-bottom: 10px;
+
+	@media #{$breakpoint-md} {
+		margin-bottom: 25px;
+	}
+}

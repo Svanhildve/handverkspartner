@@ -1,0 +1,70 @@
+@font-face {
+    font-family: biotif-regular;
+    src: url(fonts/Biotif-Regular.otf);
+}
+
+@font-face {
+    font-family: biotif-bold;
+    src: url(fonts/Biotif-Bold.otf);
+}
+
+body {
+	font-family: 'biotif-regular';
+	color: #333333;
+}
+
+p {
+	margin-top: 0;
+	padding-bottom: 24px;
+}
+
+strong {
+	font-family: 'biotif-bold';
+	font-weight: normal;
+}
+
+.lede {
+	font-size: 21px;
+	line-height: 33px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 300;
+}
+
+
+h1, .h1 {
+	font-family: 'biotif-regular';
+	font-weight: normal;
+	font-size: 50px;
+	margin-top: 0;
+	padding-top: 0;
+	margin-bottom: 20px;
+	font-weight: 300;
+
+	@media #{$breakpoint-md} {
+
+		font-size: 55px;
+		margin-bottom: 35px;
+
+	}
+}
+
+h2, .h2 {
+	font-size: 23px;
+	margin-bottom: 16px;
+
+	@media #{$breakpoint-md} {
+		font-size: 27px;
+		margin-bottom: 24px;
+	}
+	
+}
+
+h5, .h5 {
+	font-family: 'biotif-bold';
+	font-weight: normal;
+	font-size: 16px;
+	display: block;
+	padding-bottom: 10px;
+}

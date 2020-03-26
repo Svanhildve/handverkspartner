@@ -1,0 +1,148 @@
+/* Variables */
+
+$col-number:				12;
+$grid-width:				100%;
+$grid-gutter-mobile:		10px;
+$grid-gutter:				0px;
+
+$breakpoint-sm:			"only screen and (max-width: 480px)";
+$breakpoint-palm:		"only screen and (min-width: 480px)";
+$breakpoint-md: 		"only screen and (min-width: 768px)";
+$breakpoint-ml:			"only screen and (min-width: 1024px)";
+$breakpoint-lg: 		"only screen and (min-width: 1170px)";
+
+
+/* Grid */
+
+.grid-container {
+	margin: auto;
+	width: 100%;
+	//max-width: $grid-width;
+}
+
+.grid-container *{
+	box-sizing: border-box;
+}
+
+.row:before, .row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+[class*='col-'] {
+	float: left;
+	min-height: 1px;
+	padding: $grid-gutter;
+//	background: #cdcdcd;
+//	border: 1px #000 solid;
+
+}
+
+@for $i from 1 through 12 {
+	
+	.col-s-#{$i} {
+		width: 100% / $col-number * $i;
+	}
+
+	.col-s-offset-#{$i} {
+		margin-left: 100% / $col-number * $i;
+	}
+
+}
+
+@media #{$breakpoint-palm} {
+ 
+	@for $i from 1 through 12 {
+		
+		.col-pm-#{$i} {
+			width: 100% / $col-number * $i;
+		}
+
+		.col-pm-offset-#{$i} {
+			margin-left: 100% / $col-number * $i;
+		}
+
+	}
+	 
+}
+
+@media #{$breakpoint-md} {
+ 
+	@for $i from 1 through 12 {
+		
+		.col-m-#{$i} {
+			width: 100% / $col-number * $i;
+		}
+
+		.col-m-offset-#{$i} {
+			margin-left: 100% / $col-number * $i;
+		}
+
+	}
+	 
+}
+
+@media #{$breakpoint-ml} {
+ 
+	@for $i from 1 through 12 {
+		
+		.col-ml-#{$i} {
+			width: 100% / $col-number * $i;
+		}
+
+		.col-ml-offset-#{$i} {
+			margin-left: 100% / $col-number * $i;
+		}
+
+		.col-ml-offset-0 {
+			margin-left: 0;
+		}
+
+	}
+	 
+}
+
+@media #{$breakpoint-lg} {
+ 
+	@for $i from 1 through 12 {
+		
+		.col-l-#{$i} {
+			width: 100% / $col-number * $i;
+		}
+
+		.col-l-offset-#{$i} {
+			margin-left: 100% / $col-number * $i;
+		}
+
+	}
+
+	.wrapper {
+		max-width: 1170px;
+		margin: auto;
+	}
+
+	.large-wrapper {
+		max-width: 1600px;
+		margin: auto;
+	}
+	 
+}
+
+// is there a better way to do this?
+
+.full-width {
+	
+	[class*='col-'] {
+		padding: 0;
+	}
+}
+
+.full-width {
+	padding: 0;
+}
+
+.clear-full-width {
+	padding: 0 $grid-gutter;
+}

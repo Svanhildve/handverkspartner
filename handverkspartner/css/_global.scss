@@ -1,0 +1,49 @@
+*, html, body {
+	  	box-sizing: border-box;
+	  	padding: 0;
+	  	margin: 0;
+}
+
+body {
+	background: white;
+	font-size: 16px;
+	line-height: 30px;
+
+	@media #{$breakpoint-ml} {
+		font-size: 18px;
+		line-height: 32px;
+	}
+}
+
+.about {
+	margin-top: 80px;
+
+	@media #{$breakpoint-md} {
+		margin-top: 134px;
+	}
+
+	@media #{$breakpoint-ml} {
+		margin-top: 180px;
+	}
+}
+
+.home {
+	margin-top: 80px;
+
+	@media #{$breakpoint-md} {
+		margin-top: 134px;
+	}
+
+	@media #{$breakpoint-ml} {
+		margin-top: 180px;
+	}
+}
+
+ul {
+	padding-left: 24px;
+}
+
+li {
+	margin-bottom: 16px;
+	list-style-type: circle;
+}
